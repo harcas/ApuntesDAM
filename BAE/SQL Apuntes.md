@@ -1,6 +1,4 @@
-##Sentencias SQL
-
-### Creación de Bases de Datos
+## Creación de Bases de Datos
 
 Lo primero es conectar SQL Management Studio a un servidor, y después crear una nueva consulta.
 
