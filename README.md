@@ -1,6 +1,6 @@
 ## Desarrollo de Aplicaciones Multiplataforma - IES Domingo Pérez Minik
 
-En este repositorio vamos a recoger apuntes de las siguientes asignaturas, escrito por alumnos del centro:
+En este repositorio vamos a recoger apuntes de las siguientes asignaturas, escritos por alumnos del ciclo:
 
 * [Bases de Datos](BAE)
 * [Entornos de Desarrollo](ETS)
