@@ -75,5 +75,3 @@ Lo primero es conectar SQL Management Studio a un servidor, y después crear una
   go
   drop database Tienda --ejemplo de como borrar la base de datos
   ```
-
-* ​
