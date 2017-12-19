@@ -13,3 +13,4 @@ En este repositorio vamos a recoger apuntes de las siguientes asignaturas, escri
 Personas que han participado en la creación de este repositorio:
 
 * Pablo Pérez Pérez
+* Kevin David Cabrera Rodríguez
