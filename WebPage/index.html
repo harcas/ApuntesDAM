@@ -5,19 +5,12 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <script src="scripts.js"></script>
   </head>
   <body>
     <header>
       <div>
-        <img src="logo.png" id="logo">
-      </div>
-      <div class="dropdown">
-        <button class="headeritem"><a href="/resources.html">Recursos</a></button>
-        <div class="dropdown-content">
-          <a href="/index.html">1</a>
-          <a href="/index.html">2</a>
-          <a href="/index.html">3</a>
-        </div>
+        <a href="index.html"><img src="logo.png" id="logo"></a>
       </div>
       <div class="dropdown">
         <button class="headeritem"><a href="/practicas.html">Prácticas</a></button>
@@ -28,12 +21,30 @@
           <a href="/index.html">4</a>
         </div>
       </div>
-
       <button class="headeritem"><a href="/support.html">Soporte</a></button>
       <button class="headeritem"><a href="/contact.html">Contacto</a></button>
     </header>
+    <button id="navButton" onclick="openNav()">Menú</button>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="dropdown">
+    <button class="menuitem"><a href="/practicas.html">Programación</a></button>
+    <div class="dropdown-content">
+      <a href="/index.html">Actividades</a>
+      <a href="/index.html">Temario</a>
+    </div>
+  </div>
+  <a href="#">Bases de datos</a>
+  <a href="#">Lenguaje de marcas</a>
+  <a href="#">Entornos de desarollo</a>
+</div>
     <footer>
-      *footer*
+      <div>
+        Contacto
+      </div>
+      <div>
+        Legal
+      </div>
     </footer>
   </body>
 </html>
