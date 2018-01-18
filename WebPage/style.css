@@ -9,10 +9,25 @@ header {
   flex-direction: row;
   align-content: space-around;
   flex-wrap: nowrap;
+  flex-shrink:0;
 }
 
 #logo {
+    width: 3em;
+    height: 4em;
+    transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    margin: 10px;
 
+}
+#logo:hover {
+    transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    transform: translateY(-10px);
 }
 
 .headeritem {
@@ -27,16 +42,27 @@ header {
     height: 50px;
     margin: 0px;
 }
-
 .headeritem a {
   text-decoration: none;
   color: black;
 }
-
-.dropbtn:hover, .headeritem:hover {
+.headeritem:hover {
   background-color: gray;
 }
 
+
+#dropdown-content {
+  float:inherit;
+  display: none;
+  flex-direction: column;
+  position:relative;
+  top: 0px;
+  border: solid 3px black;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*
 .dropdown-content {
     display: none;
     position: absolute;
@@ -45,11 +71,18 @@ header {
     box-shadow: 10px 10px 15px rgba(0, 0, 0,0.8);
     z-index: 1;
 }
-
-.dropdown:hover .dropdown-content {
+.headeritem:hover{
+  background-color: gray;
+}
+.dropdown-content:hover .headeritem {
+  background-color: gray;
+}
+.dropdown:hover .dropdown-content{
     display: block;
 }
-
+.dropdown:hover .dropdown-content-nav{
+    display: block;
+}
 .dropdown-content a {
     display: block;
     border: 1px solid white;
@@ -59,11 +92,101 @@ header {
     margin-bottom: 1px;
     font-size: 20;
 }
+.dropdown-content-nav {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 150px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0,0.8);
+  z-index: 1;
+}
+.dropdown-content-nav a {
+    display: block;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1px;
+    font-size: 20;
+}
+*/
+/* Nav menu button */
 
-/* EL FOOTER AQUÍ */
+#navButton {
+  float: right;
+  transform: rotate(90deg);
+  background-color: white;
+  border: solid 3px black;
+  padding:0.5em;
+}
+
+/* The side navigation menu */
+.sidenav {
+   height: 100%; /* 100% Full-height */
+   width: 0; /* 0 width - change this with JavaScript */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Stay on top */
+   top: 0; /* Stay at the top */
+   right: 0;
+   background-color: #111; /* Black*/
+   overflow-x: hidden; /* Disable horizontal scroll */
+   padding-top: 60px; /* Place content 60px from the top */
+   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* The navigation menu links */
+.sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+   color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+   transition: margin-left .5s;
+   padding: 20px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+}
+
+.menuitem {
+  background-color: white;
+}
+
+/* FOOTER Down here */
 
 footer {
-  position: absolute;
-  bottom: 0px;
-  width: 99%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-top: solid 3px black;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    text-align: right;
+
+}
+
+footer div {
+  position: relative;
+  top: 0px;
+  margin: 10px;
+  height: 0.6em;
 }
