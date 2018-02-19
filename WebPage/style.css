@@ -1,6 +1,10 @@
+/*General css rules here*/
 * {
   font-family: Merriweather;
+  outline: 0;
 }
+
+
 
 /* EL FOOTER AQUÍ */
 
@@ -15,19 +19,27 @@ header {
 #logo {
     width: 3em;
     height: 4em;
-    transition: all .2s;
-    -o-transition: all .2s;
-    -moz-transition: all .2s;
-    -webkit-transition: all .2s;
     margin: 10px;
-
 }
 #logo:hover {
-    transition: all .4s;
-    -o-transition: all .4s;
-    -moz-transition: all .4s;
-    -webkit-transition: all .4s;
-    transform: translateY(-10px);
+    -webkit-animation: logoup 1s infinite ;
+    animation: logoup 1s infinite alternate;
+}
+@keyframes logoup {
+  from {
+    margin-top: 10px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+@keyframes logorestore {
+    from {
+      margin-top:any;
+    }
+    to {
+      margin-top: 10px;
+    }
 }
 
 .headeritem {
@@ -41,15 +53,16 @@ header {
     width: 150px;
     height: 50px;
     margin: 0px;
+
 }
 .headeritem a {
   text-decoration: none;
   color: black;
 }
-.headeritem:hover {
-  background-color: gray;
+.headeritem:hover, .headeritem:hover > a {
+  background-color: black;
+  color: white;
 }
-
 
 #dropdown-content {
   float:inherit;
@@ -62,68 +75,10 @@ header {
   text-decoration: none;
 }
 
-/*
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: black;
-    min-width: 150px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0,0.8);
-    z-index: 1;
-}
-.headeritem:hover{
-  background-color: gray;
-}
-.dropdown-content:hover .headeritem {
-  background-color: gray;
-}
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-.dropdown:hover .dropdown-content-nav{
-    display: block;
-}
-.dropdown-content a {
-    display: block;
-    border: 1px solid white;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 1px;
-    font-size: 20;
-}
-.dropdown-content-nav {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 150px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0,0.8);
-  z-index: 1;
-}
-.dropdown-content-nav a {
-    display: block;
-    border: 1px solid white;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 1px;
-    font-size: 20;
-}
-*/
-/* Nav menu button */
-
-#navButton {
-  float: right;
-  transform: rotate(90deg);
-  background-color: white;
-  border: solid 3px black;
-  padding:0.5em;
-}
-
 /* The side navigation menu */
 .sidenav {
    height: 100%; /* 100% Full-height */
-   width: 0; /* 0 width - change this with JavaScript */
+   width: 0; /* 0 width - change this with JavaScript (This would open the menu)*/
    position: fixed; /* Stay in place */
    z-index: 1; /* Stay on top */
    top: 0; /* Stay at the top */
